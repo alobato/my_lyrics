@@ -1,0 +1,13 @@
+<form action="/lyrics" class="search-form" method="get">
+<input class="search-field" id="q" name="q" type="text">
+</form>
+
+<% @lyrics.each do |lyric| %>
+
+  Artist: <%= lyric['artist'] %><br />
+  Music: <%= raw lyric['music'] %><br />
+  Lyric: <%= raw lyric['lyric'].gsub("|", "<br />") %><br />
+
+  <br /><br />
+
+<% end %>
